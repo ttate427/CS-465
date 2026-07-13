@@ -1,11 +1,22 @@
 const express = require('express');
 const path = require('path');
+const hbs = require('hbs');
+
+const indexRouter = require('./app_server/routes/index');
 
 const app = express();
-const PORT = 3000;
+
+app.set('views', path.join(__dirname, 'app_server/views'));
+app.set('view engine', 'hbs');
+
+// Register Handlebars partials and layouts
+hbs.registerPartials(path.join(__dirname, 'app_server/views/partials'));
+app.set('view options', {
+    layout: 'layouts/layout'
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+app.use('/', indexRouter);
+
+module.exports = app;

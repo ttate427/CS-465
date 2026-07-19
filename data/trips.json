@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Bahamas",
+    "length": "7 nights",
+    "resort": "Beach Resort",
+    "perPerson": "$999",
+    "image": "reef1.jpg",
+    "description": "Bahamas - Enjoy beautiful beaches and crystal clear water."
+  },
+  {
+    "name": "Italy",
+    "length": "10 nights",
+    "resort": "Venice Resort",
+    "perPerson": "$1599",
+    "image": "reef2.jpg",
+    "description": "Italy - Experience historic cities and amazing food."
+  },
+  {
+    "name": "Japan",
+    "length": "8 nights",
+    "resort": "Tokyo Hotel",
+    "perPerson": "$1899",
+    "image": "reef3.jpg",
+    "description": "Japan - Visit Tokyo and Kyoto during cherry blossom season."
+  }
+]

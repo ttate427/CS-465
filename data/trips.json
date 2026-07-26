@@ -1,26 +1,32 @@
 [
   {
-    "name": "Bahamas",
-    "length": "7 nights",
-    "resort": "Beach Resort",
-    "perPerson": "$999",
+    "code": "GALR210214",
+    "name": "Gale Reef",
+    "length": "4 nights / 5 days",
+    "start": "2026-09-15T08:00:00.000Z",
+    "resort": "Emerald Bay, 3 stars",
+    "perPerson": "$799.00",
     "image": "reef1.jpg",
-    "description": "Bahamas - Enjoy beautiful beaches and crystal clear water."
+    "description": "Enjoy a relaxing tropical vacation with beautiful beaches, clear water, and exciting reef activities."
   },
   {
-    "name": "Italy",
-    "length": "10 nights",
-    "resort": "Venice Resort",
-    "perPerson": "$1599",
+    "code": "DAWR210315",
+    "name": "Dawson's Reef",
+    "length": "4 nights / 5 days",
+    "start": "2026-10-10T08:00:00.000Z",
+    "resort": "Blue Lagoon, 4 stars",
+    "perPerson": "$1,199.00",
     "image": "reef2.jpg",
-    "description": "Italy - Experience historic cities and amazing food."
+    "description": "Explore colorful coral reefs, relax at a comfortable resort, and enjoy guided water activities."
   },
   {
-    "name": "Japan",
-    "length": "8 nights",
-    "resort": "Tokyo Hotel",
-    "perPerson": "$1899",
+    "code": "CLAR210621",
+    "name": "Claire's Reef",
+    "length": "7 nights / 8 days",
+    "start": "2026-11-05T08:00:00.000Z",
+    "resort": "Coral Sands, 5 stars",
+    "perPerson": "$1,999.00",
     "image": "reef3.jpg",
-    "description": "Japan - Visit Tokyo and Kyoto during cherry blossom season."
+    "description": "Experience a luxury island getaway with ocean views, snorkeling, fine dining, and resort entertainment."
   }
 ]

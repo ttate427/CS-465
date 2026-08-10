@@ -9,36 +9,30 @@ mongoose.connection.on('connected', () => {
 });
 
 mongoose.connection.on('error', (err) => {
-  console.log(`Mongoose connection error: ${err}`);
+  console.error('Mongoose connection error:', err);
 });
 
 mongoose.connection.on('disconnected', () => {
   console.log('Mongoose disconnected');
 });
 
-const gracefulShutdown = (message, callback) => {
-  mongoose.connection.close(() => {
+const gracefulShutdown = async (message) => {
+  try {
+    await mongoose.connection.close();
     console.log(`Mongoose disconnected through ${message}`);
-    callback();
-  });
+  } catch (err) {
+    console.error('Error closing Mongoose connection:', err);
+  }
 };
 
-process.once('SIGUSR2', () => {
-  gracefulShutdown('nodemon restart', () => {
-    process.kill(process.pid, 'SIGUSR2');
-  });
+process.on('SIGINT', async () => {
+  await gracefulShutdown('app termination');
+  process.exit(0);
 });
 
-process.on('SIGINT', () => {
-  gracefulShutdown('app termination', () => {
-    process.exit(0);
-  });
-});
-
-process.on('SIGTERM', () => {
-  gracefulShutdown('app shutdown', () => {
-    process.exit(0);
-  });
+process.on('SIGTERM', async () => {
+  await gracefulShutdown('app shutdown');
+  process.exit(0);
 });
 
 require('./travlr');

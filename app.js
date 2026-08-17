@@ -1,9 +1,13 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
+const passport = require('passport');
 
 // Connect to MongoDB and load the Mongoose models.
 require('./app_api/models/db');
+
+// Configure Passport authentication.
+require('./app_api/config/passport');
 
 // Import application routes.
 const indexRouter = require('./app_server/routes/index');
@@ -19,7 +23,7 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', angularOrigin);
   res.header(
     'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
   );
   res.header(
     'Access-Control-Allow-Methods',
@@ -50,6 +54,9 @@ hbs.registerPartials(
 // Allow Express to read JSON and form data.
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Initialize Passport authentication.
+app.use(passport.initialize());
 
 // Serve static files.
 app.use(express.static(path.join(__dirname, 'public')));

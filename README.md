@@ -7,4 +7,4 @@ Security added another step to testing because protected features required authe
 This course helped me understand how the frontend, backend, database, and API work together in a full stack application. I gained experience with JavaScript, Node.js, Express, Angular, MongoDB, REST APIs, Git, GitHub, authentication, testing, and debugging.
 These skills will help me work toward a career in software development. The Travlr Getaways project also gives me a full stack application that I can include in my portfolio and show to future employers.
 
-AI Usage Statement :  I used ChatGPT, a generative AI tool developed by OpenAI, to help organize and improve the wording of my reflection. I reviewed and edited the final response to make sure it accurately represents my work and understanding of the project.
+AI Usage Statement :  I used ChatGPT (OpenAI) to help organize and improve the wording of my reflection based on my completed Travlr Getaways project. I reviewed and edited the response to ensure it accurately reflects my own work and understanding of the project.
